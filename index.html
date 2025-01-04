@@ -19,6 +19,20 @@
     />
   </head>
   <body>
+    <div class="modal hidden">
+      <div class="m-post">
+        <img src="dummy.jpg" alt="" class="m-post-img" />
+        <div class="m-post-details">
+          <p class="m-post-username jersey-20-regular">USER01</p>
+          <p class="m-post-caption instrument-sans-100">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
+            consequatur minus id! Debitis temporibus dolore veniam amet, laborum
+            nam libero provident praesentium blanditiis, eos explicabo?
+          </p>
+          <p class="m-post-like instrument-sans-100">4💗</p>
+        </div>
+      </div>
+    </div>
     <div class="navbar">
       <h1 class="jersey-20-regular">MOMENTS</h1>
       <div id="navbutton-container">
@@ -45,6 +59,29 @@
       </div>
       <img src="moment.jpg" alt="" id="moment-img" />
     </div>
-    <div id="todays-posts"></div>
+    <div id="todays-posts">
+      <div id="tp-header">
+        <h2 class="jersey-20-regular" id="tp-title">Today's Posts</h2>
+        <a href="#" id="tp-post-btn" class="jersey-20-regular">Post a moment</a>
+      </div>
+      <div id="tp-container">
+        <div class="post">
+          <img src="dummy.jpg" alt="" class="post-img" />
+          <p class="post-likes jersey-20-regular">8 likes</p>
+        </div>
+        <div class="post">
+          <img src="dummy.jpg" alt="" class="post-img" />
+          <p class="post-likes jersey-20-regular">8 likes</p>
+        </div>
+        <div class="post">
+          <img src="dummy.jpg" alt="" class="post-img" />
+          <p class="post-likes jersey-20-regular">8 likes</p>
+        </div>
+        <div class="post">
+          <img src="moment.jpg" alt="" class="post-img" />
+          <p class="post-likes jersey-20-regular">8 likes</p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
