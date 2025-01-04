@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
+    <title>Register</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -35,8 +35,12 @@
     <div id="login-page">
       <form action="" id="login-form">
         <h3 style="font-size: 30px; margin: 0" class="jersey-20-regular">
-          Login
+          Register
         </h3>
+        <div class="form-input instrument-sans-100">
+          <label for="name">Name</label>
+          <input name="Name" type="Name" placeholder="Jon Snow" />
+        </div>
         <div class="form-input instrument-sans-100">
           <label for="email">Email</label>
           <input name="email" type="email" placeholder="username@example.com" />
@@ -45,14 +49,18 @@
           <label for="passwd">Password</label>
           <input type="password" name="passwd" id="passwd" />
         </div>
+        <div class="form-input instrument-sans-100">
+          <label for="re-passwd">Re-Enter Password</label>
+          <input type="password" name="re-passwd" id="re-passwd" />
+        </div>
         <button>Login</button>
         <p class="jersey-20-regular" style="font-size: 20px">
-          Not a user?
+          Already a user?
           <a
-            href="/register.html"
+            href="/login.html"
             style="color: rgb(245, 200, 200)"
             class="instrument-sans-100"
-            >Register</a
+            >Login</a
           >
         </p>
       </form>
