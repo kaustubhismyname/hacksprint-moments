@@ -7,7 +7,7 @@
   align-items: center;
 }
 
-#login-form {
+#register-form {
   width: 300px;
   /* border: 2px solid white; */
   height: 200px;
@@ -36,7 +36,7 @@
   font-size: 16px;
 }
 
-#login-form button {
+#register-form button {
   background-color: #fa3cb4;
   height: 30px;
   width: 70px;
