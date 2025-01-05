@@ -1,62 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="login.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Jersey+20&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div class="navbar">
-      <a href="index.html"><h1 class="jersey-20-regular">MOMENTS</h1></a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Momento!</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Welcome to Momento!</h1>
+        <p>Exclusively for IITM BS Data Science Students</p>
 
-      <div class="navbutton-container">
-        <a
-          href="/previous-memories.html"
-          class="navbutton jersey-20-regular"
-          id="prevmem"
-          >Previous Memories</a
-        >
-        <a href="/login.html" class="navbutton jersey-20-regular">Login </a>
-      </div>
-    </div>
-    <div id="login-page">
-      <form action="" id="login-form">
-        <h3 style="font-size: 30px; margin: 0" class="jersey-20-regular">
-          Login
-        </h3>
-        <div class="form-input instrument-sans-100">
-          <label for="email">Email</label>
-          <input name="email" type="email" placeholder="username@example.com" />
+        <!-- Compact Google Sign-In Button -->
+        <div id="g_id_onload"
+            data-client_id="356605619715-j957gqr93v6ktq3bbo808qlpet393odu.apps.googleusercontent.com"
+            data-callback="handleCredentialResponse"
+            data-auto_prompt="false">
         </div>
-        <div class="form-input instrument-sans-100">
-          <label for="passwd">Password</label>
-          <input type="password" name="passwd" id="passwd" />
-        </div>
-        <button>Login</button>
-        <p class="jersey-20-regular" style="font-size: 20px">
-          Not a user?
-          <a
-            href="/register.html"
-            style="color: rgb(245, 200, 200)"
-            class="instrument-sans-100"
-            >Register</a
-          >
-        </p>
-      </form>
+        
+        <!-- Smaller Google Sign-In Button -->
+        <div class="g_id_signin" data-type="icon"></div>
+        
+        <p id="error-message" style="color: red; display: none;"></p>
     </div>
-  </body>
+
+    <script src="script.js"></script>
+</body>
 </html>

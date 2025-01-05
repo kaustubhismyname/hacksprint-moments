@@ -1,47 +1,103 @@
-#login-page {
-  /* border: 2px solid white; */
-  height: 70vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Importing modern fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;600&display=swap');
+
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #000000, #121212);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    position: relative;
 }
 
-#login-form {
-  width: 300px;
-  /* border: 2px solid white; */
-  height: 200px;
-  min-height: fit-content;
-  background-color: #181818;
-  color: white;
-  padding: 25px;
-  border-radius: 25px;
-
-  /* margin: 0 auto; */
+/* Animated Gradient Effect on Cursor */
+body::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 77, 77, 0.2), transparent);
+    pointer-events: none;
+    transition: transform 0.1s ease-out;
 }
 
-.form-input {
-  margin: 10px 0;
-  display: flex;
-  justify-content: space-between;
+/* Cursor Effect Movement */
+body:hover::before {
+    transform: translate(var(--x, 50px), var(--y, 50px));
 }
 
-.form-input input {
-  background-color: #242424;
-  color: white;
-  border-radius: 15px;
-  text-align: center;
-  border-color: #ff5bc3;
-  box-shadow: 2px 2px 4px #4f4e4e;
-  font-size: 16px;
+/* Container Styling */
+.login-container {
+    padding: 40px;
+    background: rgba(20, 20, 20, 0.95);
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(255, 99, 71, 0.8);
+    border: 2px solid rgba(255, 77, 77, 0.8);
+    backdrop-filter: blur(20px);
+    animation: glow 2s infinite alternate;
 }
 
-#login-form button {
-  background-color: #fa3cb4;
-  height: 30px;
-  width: 70px;
-  border-radius: 20px;
-  border: none;
-  box-shadow: 2px 2px 4px #4f4e4e;
-  cursor: pointer;
+/* Neon Glow Animation */
+@keyframes glow {
+    from {
+        box-shadow: 0 0 20px rgba(255, 99, 71, 0.8);
+    }
+    to {
+        box-shadow: 0 0 40px rgba(255, 99, 71, 1);
+    }
+}
+
+/* Heading Styling */
+.login-container h1 {
+    font-size: 2.5rem;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    color: #ff4b2b;
+    margin-bottom: 10px;
+}
+
+.login-container p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #ddd;
+}
+
+/* Compact Google Sign-In Button */
+.g_id_signin {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Button Styling */
+button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #ff4b2b, #ff416c);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(255, 99, 71, 0.8);
+}
+
+/* Hover Effect on Button */
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 40px rgba(255, 99, 71, 1);
+}
+
+/* Error Message Styling */
+#error-message {
+    color: red;
+    margin-top: 10px;
+    font-size: 1rem;
 }
